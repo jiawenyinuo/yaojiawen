@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            list-style-type: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 微软雅黑;
+            line-height: 60px;
+        }
+        body{
+            background-color: rgb(21, 212, 237);
+        }
+        .yijihezi{
+            width: 120px;
+            height: auto;
+            margin: 54px 0 0 550px;
+        }
+        .yijiliebiao{
+            width: 120px;
+        }
+        .yijiliebiao>li{
+            width: 120px;
+            height: 150px;
+            position: relative;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+        }
+        .erjihezi{
+            position: absolute;
+            left:120px;
+            bottom:50px;
+            background-color: rgb(255 255 255 / 0.8);
+            padding: 0;
+            width: 0;
+            overflow: hidden;
+            transition: all 300ms linear;
+        }
+        .erjihezi a{
+            color: black;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .erjiliebiao{
+            width: 120px;
+        }
+        .erjiliebiao>li{
+            width: 120px;
+            height:40px;
+        }
+        .yijiliebiao>li:hover .erjihezi{
+            width: 360px;
+            padding: 10px;
+        }
+        .yijiliebiao>li>a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 60px;
+            background-color: #1c52f5;
+            z-index: -1;
+            transition: all 300ms linear;
+}
+        .yijiliebiao>li:hover a::after{
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="yijihezi">
+        <ul class="yijiliebiao">
+            <li>
+                <a href=" ">早餐</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">包子</a ></li>
+                        <li><a href="#">豆浆</a ></li>
+                        <li><a href="#">鸡蛋</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">午餐</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">米饭</a ></li>
+                        <li><a href="#">青菜</a ></li>
+                        <li><a href="#">鸡肉</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">晚餐</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">面条</a ></li>
+                        <li><a href="#">番茄</a ></li>
+                        <li><a href="#">豆腐</a ></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
